@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Keep It Shiny — Limpeza Profissional</title>
+  <meta name="description" content="Keep It Shiny — Serviços de limpeza doméstica, comercial e pós-obra. Profissionalismo, confiança e frescura." />
+  <style>
+    :root{
+      --bg: #f8fbff;
+      --white: #ffffff;
+      --sky-500: #0ea5e9;
+      --sky-600: #0284c7;
+      --muted: #6b7280;
+      --silver: #cbd5e1;
+      --radius: 14px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#ffffff);color:#0f172a;line-height:1.5}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:54px;height:54px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--sky-500),var(--sky-600));box-shadow:0 6px 18px rgba(2,132,199,0.16)}
+    .logo svg{display:block}
+    h1{margin:0;font-size:18px}
+    .tag{font-size:13px;color:var(--muted)}
+
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-size:14px}
+    .btn-primary{background:var(--sky-600);color:var(--white);padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:600}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr;gap:20px;align-items:center;padding:28px 0}
+    .hero .left h2{font-size:34px;margin:0 0 12px 0}
+    .hero p{color:var(--muted);margin:0}
+    .hero .actions{margin-top:18px;display:flex;gap:12px}
+    .card{background:var(--white);border-radius:var(--radius);padding:20px;box-shadow:0 6px 18px rgba(15,23,42,0.06)}
+
+    /* Services grid */
+    .grid{display:grid;grid-template-columns:repeat(1,1fr);gap:16px;margin-top:22px}
+    @media(min-width:720px){.hero{grid-template-columns:1fr 420px}.grid{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
+
+    .service{padding:16px;border-radius:12px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid var(--silver)}
+    .service h4{margin:0 0 6px 0}
+    .service p{margin:0;color:var(--muted);font-size:14px}
+
+    /* About + testimonials */
+    .split{display:grid;grid-template-columns:1fr;gap:16px;margin-top:26px}
+    @media(min-width:900px){.split{grid-template-columns:1fr 360px}}
+    .pill{background:#f0f9ff;padding:12px;border-radius:12px}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr;gap:16px;margin:26px 0}
+    @media(min-width:900px){.contact-grid{grid-template-columns:1fr 420px}}
+    form input, form textarea, form select{width:100%;padding:10px;border-radius:10px;border:1px solid var(--silver);font-size:14px}
+    .muted{color:var(--muted);font-size:14px}
+    .small{font-size:13px;color:var(--muted)}
+
+    footer{padding:18px 0;border-top:1px solid #e6eef8;margin-top:26px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* Utilities */
+    .flex{display:flex;gap:12px;align-items:center}
+    .stack{display:flex;flex-direction:column;gap:8px}
+    .pill-cta{display:inline-block;padding:8px 12px;border-radius:10px;border:1px solid var(--silver)}
+    .success{color:green}
+    .error{color:#dc2626}
+    .hidden{display:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <!-- simple sparkle icon -->
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L14.1 7.6L20 9.1L15.5 13.2L16.6 19L12 16.1L7.4 19L8.5 13.2L4 9.1L9.9 7.6L12 2Z" fill="white"/>
+          </svg>
+        </div>
+        <div>
+          <h1>Keep It Shiny</h1>
+          <div class="tag">Limpeza profissional & manutenção</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#services">Serviços</a>
+        <a href="#about">Sobre</a>
+        <a href="#testimonials">Testemunhos</a>
+        <a class="btn-primary" href="#contact">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="left">
+          <h2>A tua limpeza em boas mãos</h2>
+          <p>Serviços de limpeza doméstica, comercial e pós-obra. Profissionais de confiança que deixam tudo impecável — rápido, seguro e com atenção ao detalhe.</p>
+          <div class="actions">
+            <a class="btn-primary" href="#contact">Pedir Orçamento</a>
+            <a class="pill-cta" href="#services">Ver Serviços</a>
+          </div>
+
+          <div style="margin-top:18px" class="flex small muted">
+            <div class="flex"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#0ea5e9" stroke-width="1.2"/></svg><span>Profissionais certificados</span></div>
+            <div class="flex"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" stroke="#0ea5e9" stroke-width="1.2"/></svg><span>Produtos eco-friendly</span></div>
+          </div>
+        </div>
+
+        <aside class="card">
+          <h3 style="margin:0 0 6px 0">Orçamento rápido</h3>
+          <p class="small muted">Diz-nos o serviço que precisas e receberás um orçamento personalizado.</p>
+          <form id="quickForm" class="stack" style="margin-top:12px">
+            <input type="text" name="name" placeholder="Nome" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <select name="service">
+              <option value="">Seleciona um serviço (opcional)</option>
+              <option>Limpeza Doméstica</option>
+              <option>Limpeza Comercial</option>
+              <option>Pós-Obra</option>
+              <option>Manutenção de Escritórios</option>
+              <option>Limpeza de Vidros</option>
+            </select>
+            <textarea name="message" placeholder="Detalhes / mensagem" rows="4"></textarea>
+            <div class="flex" style="justify-content:space-between;align-items:center">
+              <button type="submit" class="btn-primary">Enviar</button>
+              <div id="quickStatus" class="small muted"></div>
+            </div>
+          </form>
+        </aside>
+      </section>
+
+      <section id="services">
+        <h3 style="margin-top:6px">Serviços</h3>
+        <p class="muted">Oferecemos um leque completo de opções adaptadas às tuas necessidades.</p>
+        <div class="grid">
+          <div class="service">
+            <h4>Limpeza Doméstica</h4>
+            <p>Limpezas regulares e profundas para residências — atenção ao detalhe.</p>
+          </div>
+          <div class="service">
+            <h4>Limpeza Comercial</h4>
+            <p>Serviços para escritórios, lojas e espaços comerciais com horários flexíveis.</p>
+          </div>
+          <div class="service">
+            <h4>Pós-Obra</h4>
+            <p>Remoção de sujidade de obras e preparação do espaço para ocupação.</p>
+          </div>
+          <div class="service">
+            <h4>Manutenção de Escritórios</h4>
+            <p>Pequenas reparações, reposição de consumíveis e manutenção leve.</p>
+          </div>
+          <div class="service">
+            <h4>Limpeza de Vidros</h4>
+            <p>Limpeza interior e exterior de vidros, fachadas e montras.</p>
+          </div>
+          <div class="service">
+            <h4>Planos Mensais</h4>
+            <p>Contratos flexíveis para empresas e residências com visitas programadas.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="split">
+        <div class="card">
+          <h3>Sobre nós</h3>
+          <p class="muted">A Keep It Shiny nasceu com o propósito de tornar espaços mais agradáveis e funcionais. Valorizamos a confiança do cliente, a pontualidade e a atenção ao detalhe. Usamos produtos seguros e, sempre que possível, escolhas mais amigas do ambiente.</p>
+
+          <ul style="margin-top:12px;color:var(--muted);font-size:14px;line-height:1.6">
+            <li>• Equipa treinada e verificada</li>
+            <li>• Produtos profissionais e seguros</li>
+            <li>• Planos flexíveis e contratos mensais disponíveis</li>
+          </ul>
+        </div>
+
+        <div class="stack">
+          <div class="pill card">
+            <h4 style="margin:0">Missão</h4>
+            <p class="small muted" style="margin-top:8px">Proporcionar ambientes limpos que melhoram o bem-estar e a produtividade.</p>
+          </div>
+          <div class="pill card">
+            <h4 style="margin:0">Valores</h4>
+            <p class="small muted" style="margin-top:8px">Profissionalismo, confiança e sustentabilidade.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" style="margin-top:18px">
+        <h3>Testemunhos</h3>
+        <div class="grid" style="margin-top:12px">
+          <div class="card">
+            <p>“Serviço impecável — chegaram sempre a horas e deixaram tudo brilhante!”</p>
+            <div class="small muted" style="margin-top:8px">— Mariana R.</div>
+          </div>
+          <div class="card">
+            <p>“Profissionais atenciosos e de confiança. Recomendo para empresas.”</p>
+            <div class="small muted" style="margin-top:8px">— João P.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-grid">
+        <div class="card">
+          <h3>Contacto</h3>
+          <p class="muted">Preenche o formulário ou usa os contactos abaixo.</p>
+
+          <div style="margin-top:12px" class="small muted">
+            <div style="margin-bottom:8px">Telefone: +351 912 345 678</div>
+            <div style="margin-bottom:8px">Email: info@keepitshiny.pt</div>
+            <div>Localização: Coimbra, Portugal</div>
+          </div>
+
+          <div style="margin-top:12px" class="flex">
+            <a href="#" title="Instagram" class="pill-cta">Instagram</a>
+            <a href="#" title="Facebook" class="pill-cta">Facebook</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h4>Enviar mensagem</h4>
+          <form id="contactForm" class="stack" style="margin-top:12px">
+            <input type="text" name="name" placeholder="Nome" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <textarea name="message" placeholder="Mensagem" rows="6" required></textarea>
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:6px">
+              <button type="submit" class="btn-primary">Enviar</button>
+              <div id="contactStatus" class="small muted"></div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      © <span id="year"></span> Keep It Shiny — Todos os direitos reservados · Política de Privacidade
+    </footer>
+  </div>
+
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function simulateSend(formEl, statusEl){
+      statusEl.textContent = 'A enviar...';
+      setTimeout(()=>{
+        statusEl.textContent = 'Mensagem enviada! Responderemos em breve.';
+        statusEl.classList.remove('muted');
+        statusEl.classList.add('success');
+        formEl.reset();
+      },800);
+    }
+
+    document.getElementById('quickForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      simulateSend(e.target, document.getElementById('quickStatus'));
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      simulateSend(e.target, document.getElementById('contactStatus'));
+    });
+  </script>
+</body>
+</html>
